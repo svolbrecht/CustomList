@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CustomList;
 
 namespace UnitTestCustomList
 {
@@ -80,6 +81,45 @@ namespace UnitTestCustomList
 
             //Assert
             Assert.AreEqual(expectedResult7, test[6]);
+
+        }
+
+        [TestMethod]
+        public void Add_CheckValueIndex12()
+        {
+            //Arrange
+            CustomList<int> test = new CustomList<int>();
+            int expectedResult1 = 2;
+            int expectedResult2 = 16;
+            int expectedResult3 = 3;
+            int expectedResult4 = 4;
+            int expectedResult5 = 5;
+            int expectedResult6 = 6;
+            int expectedResult7 = 7;
+            int expectedResult8 = 8;
+            int expectedResult9 = 9;
+            int expectedResult10 = 10;
+            int expectedResult11 = 11;
+            int expectedResult12 = 12;
+            int expectedResult13 = 13;
+
+            //Act
+            test.Add(expectedResult1);
+            test.Add(expectedResult2);
+            test.Add(expectedResult3);
+            test.Add(expectedResult4);
+            test.Add(expectedResult5);
+            test.Add(expectedResult6);
+            test.Add(expectedResult7);
+            test.Add(expectedResult8);
+            test.Add(expectedResult9);
+            test.Add(expectedResult10);
+            test.Add(expectedResult11);
+            test.Add(expectedResult12);
+            test.Add(expectedResult13);
+
+            //Assert
+            Assert.AreEqual(expectedResult13, test[12]);
 
         }
     }
