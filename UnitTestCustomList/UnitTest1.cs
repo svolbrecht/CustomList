@@ -213,5 +213,34 @@ namespace UnitTestCustomList
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [TestMethod]
+        public void AdditionOperator_CheckIfStringsCombineCorrectly()
+        {
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> actualResult = new CustomList<int>();
+            CustomList<int> expectedResult = new CustomList<int>();
+            test1.Add(1);
+            test1.Add(2);
+            test1.Add(3);
+            test2.Add(4);
+            test2.Add(5);
+            test2.Add(6);
+            expectedResult.Add(1);
+            expectedResult.Add(2);
+            expectedResult.Add(3);
+            expectedResult.Add(4);
+            expectedResult.Add(5);
+            expectedResult.Add(6);
+
+            //Act
+            actualResult = test1 + test2;
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualresult);
+        }
+
     }
 }
