@@ -27,7 +27,7 @@ namespace UnitTestCustomList
             Assert.AreEqual(expectedResult, test.Count);
         }
 
-       [TestMethod]
+        [TestMethod]
         public void Add_CheckValueIndex0()
         {
             //Arrange
@@ -69,7 +69,7 @@ namespace UnitTestCustomList
             int expectedResult5 = 5;
             int expectedResult6 = 6;
             int expectedResult7 = 7;
-   
+
             //Act
             test.Add(expectedResult1);
             test.Add(expectedResult2);
@@ -121,6 +121,97 @@ namespace UnitTestCustomList
             //Assert
             Assert.AreEqual(expectedResult13, test[12]);
 
+        }
+
+        [TestMethod]
+        public void Remove_CheckAtIndex0()
+        {
+            //Arrange
+            CustomList<int> test = new CustomList<int>();
+            test.Add(14);
+            test.Add(10);
+            int expectedResult = 10;
+
+            //Act
+            test.Remove(14);
+            int actualResult = test[0];
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+
+        }
+
+        [TestMethod]
+        public void Remove_CheckAtIndex2()
+        {
+            //Arrange
+            CustomList<int> test = new CustomList<int>();
+            test.Add(10);
+            test.Add(11);
+            test.Add(12);
+            test.Add(13);
+            test.Add(14);
+            int expectedResult = 13;
+
+            //Act
+            test.Remove(12);
+            int actualResult = test[2];
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void Remove_CheckAtIndex7()
+        {
+            //Arrange
+            CustomList<int> test = new CustomList<int>();
+            test.Add(10);
+            test.Add(11);
+            test.Add(12);
+            test.Add(13);
+            test.Add(14);
+            test.Add(15);
+            test.Add(16);
+            test.Add(17);
+            test.Add(18);
+            int expectedResult = 18;
+
+            //Act
+            test.Remove(17);
+            int actualResult = test[7];
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void Remove_CheckAtIndex12()
+        {
+            //Arrange
+            CustomList<int> test = new CustomList<int>();
+            test.Add(10);
+            test.Add(11);
+            test.Add(12);
+            test.Add(13);
+            test.Add(14);
+            test.Add(15);
+            test.Add(16);
+            test.Add(17);
+            test.Add(18);
+            test.Add(19);
+            test.Add(20);
+            test.Add(21);
+            test.Add(22);
+            test.Add(23);
+            int expectedResult = 23;
+
+            //Act
+            test.Remove(22);
+            int actualResult = test[12];
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }
