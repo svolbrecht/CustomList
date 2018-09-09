@@ -214,124 +214,124 @@ namespace UnitTestCustomList
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-        [TestMethod]
-        public void AdditionOperator_CheckIfStringsCombineCorrectly()
-        {
-            //Arrange
-            CustomList<int> test1 = new CustomList<int>();
-            CustomList<int> test2 = new CustomList<int>();
-            CustomList<int> actualResult;
-            CustomList<int> expectedResult = new CustomList<int>();
-            test1.Add(1);
-            test1.Add(2);
-            test1.Add(3);
-            test2.Add(4);
-            test2.Add(5);
-            test2.Add(6);
-            expectedResult.Add(1);
-            expectedResult.Add(2);
-            expectedResult.Add(3);
-            expectedResult.Add(4);
-            expectedResult.Add(5);
-            expectedResult.Add(6);
+        //[TestMethod]
+        //public void AdditionOperator_CheckIfStringsCombineCorrectly()
+        //{
+        //    //Arrange
+        //    CustomList<int> test1 = new CustomList<int>();
+        //    CustomList<int> test2 = new CustomList<int>();
+        //    CustomList<int> actualResult;
+        //    CustomList<int> expectedResult = new CustomList<int>();
+        //    test1.Add(1);
+        //    test1.Add(2);
+        //    test1.Add(3);
+        //    test2.Add(4);
+        //    test2.Add(5);
+        //    test2.Add(6);
+        //    expectedResult.Add(1);
+        //    expectedResult.Add(2);
+        //    expectedResult.Add(3);
+        //    expectedResult.Add(4);
+        //    expectedResult.Add(5);
+        //    expectedResult.Add(6);
 
-            //Act
-            actualResult = test1 + test2;
+        //    //Act
+        //    actualResult = test1 + test2;
 
-            //Assert
-            Assert.AreEqual(expectedResult, actualResult);
-        }
+        //    //Assert
+        //    Assert.AreEqual(expectedResult, actualResult);
+        //}
 
-        [TestMethod]
-        public void SubtractOperator_CheckIfStringsReduceCorrectly()
-        {
-            //subracting each number and the same indexes
+        //[TestMethod]
+        //public void SubtractOperator_CheckIfStringsReduceCorrectly()
+        //{
+        //    //subracting each number and the same indexes
 
-            //Arrange
-            CustomList<int> test1 = new CustomList<int>();
-            CustomList<int> test2 = new CustomList<int>();
-            CustomList<int> actualResult;
-            CustomList<int> expectedResult = new CustomList<int>();
-            test1.Add(4);
-            test1.Add(5);
-            test1.Add(6);
-            test2.Add(1);
-            test2.Add(2);
-            test2.Add(3);
-            expectedResult.Add(3);
-            expectedResult.Add(3);
-            expectedResult.Add(3);
+        //    //Arrange
+        //    CustomList<int> test1 = new CustomList<int>();
+        //    CustomList<int> test2 = new CustomList<int>();
+        //    CustomList<int> actualResult;
+        //    CustomList<int> expectedResult = new CustomList<int>();
+        //    test1.Add(4);
+        //    test1.Add(5);
+        //    test1.Add(6);
+        //    test2.Add(1);
+        //    test2.Add(2);
+        //    test2.Add(3);
+        //    expectedResult.Add(3);
+        //    expectedResult.Add(3);
+        //    expectedResult.Add(3);
 
-            //Act
-            actualResult = test1 - test2;
+        //    //Act
+        //    actualResult = test1 - test2;
 
-            //Assert
-            Assert.AreEqual(expectedResult, actualResult);
-        }
+        //    //Assert
+        //    Assert.AreEqual(expectedResult, actualResult);
+        //}
 
-        [TestMethod]
-        public void CheckConvertListToString()
-        {
-            //Arrange
-            CustomList<int> test1 = new CustomList<int>();
-            test1.Add(1);
-            test1.Add(2);
-            test1.Add(3);
-            string expectedValue = "1,2,3";
+        //[TestMethod]
+        //public void CheckConvertListToString()
+        //{
+        //    //Arrange
+        //    CustomList<int> test1 = new CustomList<int>();
+        //    test1.Add(1);
+        //    test1.Add(2);
+        //    test1.Add(3);
+        //    string expectedValue = "1,2,3";
 
-            //Act
-            string actualValue = test1.ToString();
+        //    //Act
+        //    string actualValue = test1.ToString();
 
-            //Assert
-            Assert.AreEqual(expectedValue, actualValue);
-        }
+        //    //Assert
+        //    Assert.AreEqual(expectedValue, actualValue);
+        //}
 
-        [TestMethod]
-        public void CheckZipTwoLists()
-        {
-            //Arrange
-            CustomList<int> test1 = new CustomList<int>();
-            CustomList<int> test2 = new CustomList<int>();
-            CustomList<int> test3 = new CustomList<int>();
-            test1.Add(1);
-            test1.Add(3);
-            test1.Add(5);
-            test2.Add(2);
-            test2.Add(4);
-            test2.Add(6);
-            int expectedValue = 5;
+        //[TestMethod]
+        //public void CheckZipTwoLists()
+        //{
+        //    //Arrange
+        //    CustomList<int> test1 = new CustomList<int>();
+        //    CustomList<int> test2 = new CustomList<int>();
+        //    CustomList<int> test3 = new CustomList<int>();
+        //    test1.Add(1);
+        //    test1.Add(3);
+        //    test1.Add(5);
+        //    test2.Add(2);
+        //    test2.Add(4);
+        //    test2.Add(6);
+        //    int expectedValue = 5;
 
-            //Act
-            test3 = test1.Zip(test2);
-            int actualValue = test3[4];
+        //    //Act
+        //    test3 = test1.Zip(test2);
+        //    int actualValue = test3[4];
 
-            //Assert
-            Assert.AreEqual(expectedValue, actualValue);
-        }
+        //    //Assert
+        //    Assert.AreEqual(expectedValue, actualValue);
+        //}
 
-        [TestMethod]
-        public void CheckZipListOfDifferentSizes()
-        {
-            //Arrange
-            CustomList<int> test1 = new CustomList<int>();
-            CustomList<int> test2 = new CustomList<int>();
-            CustomList<int> test3 = new CustomList<int>();
-            test1.Add(1);
-            test1.Add(3);
-            test1.Add(5);
-            test2.Add(2);
-            test2.Add(4);
-            test2.Add(6);
-            test2.Add(7);
-            test2.Add(8);
-            int expectedValue = 8;
+        //[TestMethod]
+        //public void CheckZipListOfDifferentSizes()
+        //{
+        //    //Arrange
+        //    CustomList<int> test1 = new CustomList<int>();
+        //    CustomList<int> test2 = new CustomList<int>();
+        //    CustomList<int> test3 = new CustomList<int>();
+        //    test1.Add(1);
+        //    test1.Add(3);
+        //    test1.Add(5);
+        //    test2.Add(2);
+        //    test2.Add(4);
+        //    test2.Add(6);
+        //    test2.Add(7);
+        //    test2.Add(8);
+        //    int expectedValue = 8;
 
-            //Act
-            test3 = test1.Zip(test2);
-            int actualValue = test3[7];
+        //    //Act
+        //    test3 = test1.Zip(test2);
+        //    int actualValue = test3[7];
 
-            //Assert
-            Assert.AreEqual(expectedValue, actualValue);
-        }
+        //    //Assert
+        //    Assert.AreEqual(expectedValue, actualValue);
+        //}
     }
 }

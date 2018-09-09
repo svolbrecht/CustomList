@@ -1,0 +1,7 @@
+C:\Users\svolb\Desktop\DCCmaterials\CustomList\CustomList\CustomList\bin\Debug\CustomList.exe.config
+C:\Users\svolb\Desktop\DCCmaterials\CustomList\CustomList\CustomList\bin\Debug\CustomList.exe
+C:\Users\svolb\Desktop\DCCmaterials\CustomList\CustomList\CustomList\bin\Debug\CustomList.pdb
+C:\Users\svolb\Desktop\DCCmaterials\CustomList\CustomList\CustomList\obj\Debug\CustomList.csprojAssemblyReference.cache
+C:\Users\svolb\Desktop\DCCmaterials\CustomList\CustomList\CustomList\obj\Debug\CustomList.csproj.CoreCompileInputs.cache
+C:\Users\svolb\Desktop\DCCmaterials\CustomList\CustomList\CustomList\obj\Debug\CustomList.exe
+C:\Users\svolb\Desktop\DCCmaterials\CustomList\CustomList\CustomList\obj\Debug\CustomList.pdb
