@@ -220,7 +220,7 @@ namespace UnitTestCustomList
             //Arrange
             CustomList<int> test1 = new CustomList<int>();
             CustomList<int> test2 = new CustomList<int>();
-            CustomList<int> actualResult = new CustomList<int>();
+            CustomList<int> actualResult;
             CustomList<int> expectedResult = new CustomList<int>();
             test1.Add(1);
             test1.Add(2);
@@ -239,8 +239,49 @@ namespace UnitTestCustomList
             actualResult = test1 + test2;
 
             //Assert
-            Assert.AreEqual(expectedResult, actualresult);
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
+        [TestMethod]
+        public void SubtractOperator_CheckIfStringsReduceCorrectly()
+        {
+            //subracting each number and the same indexes
+
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> actualResult;
+            CustomList<int> expectedResult = new CustomList<int>();
+            test1.Add(4);
+            test1.Add(5);
+            test1.Add(6);
+            test2.Add(1);
+            test2.Add(2);
+            test2.Add(3);
+            expectedResult.Add(3);
+            expectedResult.Add(3);
+            expectedResult.Add(3);
+
+            //Act
+            actualResult = test1 - test2;
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void ConvertListToString()
+        {
+            CustomList<int> test1 = new CustomList<int>();
+            //Arrange
+            test1.Add(1);
+            test1.Add(2);
+            test1.Add(3);
+            string expectedValue = "1,2,3";
+            //Act
+            string actualValue = test1.ToString();
+            //Assert
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }
