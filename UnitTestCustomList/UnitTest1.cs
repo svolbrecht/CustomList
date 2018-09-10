@@ -214,60 +214,211 @@ namespace UnitTestCustomList
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-        //[TestMethod]
-        //public void AdditionOperator_CheckIfStringsCombineCorrectly()
-        //{
-        //    //Arrange
-        //    CustomList<int> test1 = new CustomList<int>();
-        //    CustomList<int> test2 = new CustomList<int>();
-        //    CustomList<int> actualResult;
-        //    CustomList<int> expectedResult = new CustomList<int>();
-        //    test1.Add(1);
-        //    test1.Add(2);
-        //    test1.Add(3);
-        //    test2.Add(4);
-        //    test2.Add(5);
-        //    test2.Add(6);
-        //    expectedResult.Add(1);
-        //    expectedResult.Add(2);
-        //    expectedResult.Add(3);
-        //    expectedResult.Add(4);
-        //    expectedResult.Add(5);
-        //    expectedResult.Add(6);
+        [TestMethod]
+        public void AdditionOperator_CheckIfListsCombineCorrectlyAtIndex0()
+        {
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> test3 = new CustomList<int>();
+            test1.Add(1);
+            test1.Add(2);
+            test1.Add(3);
+            test2.Add(4);
+            test2.Add(5);
+            test2.Add(6);
+            int expectedResult = 1;
 
-        //    //Act
-        //    actualResult = test1 + test2;
+            //Act
+            test3 = test1 + test2;
+            int actualResult = test3[0];
 
-        //    //Assert
-        //    Assert.AreEqual(expectedResult, actualResult);
-        //}
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
 
-        //[TestMethod]
-        //public void SubtractOperator_CheckIfStringsReduceCorrectly()
-        //{
-        //    //subracting each number and the same indexes
+        [TestMethod]
+        public void AdditionOperator_CheckIfListsCombineCorrectlyAtIndex1()
+        {
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> test3 = new CustomList<int>();
+            test1.Add(1);
+            test1.Add(2);
+            test1.Add(3);
+            test2.Add(4);
+            test2.Add(5);
+            test2.Add(6);
+            int expectedResult = 2;
 
-        //    //Arrange
-        //    CustomList<int> test1 = new CustomList<int>();
-        //    CustomList<int> test2 = new CustomList<int>();
-        //    CustomList<int> actualResult;
-        //    CustomList<int> expectedResult = new CustomList<int>();
-        //    test1.Add(4);
-        //    test1.Add(5);
-        //    test1.Add(6);
-        //    test2.Add(1);
-        //    test2.Add(2);
-        //    test2.Add(3);
-        //    expectedResult.Add(3);
-        //    expectedResult.Add(3);
-        //    expectedResult.Add(3);
+            //Act
+            test3 = test1 + test2;
+            int actualResult = test3[1];
 
-        //    //Act
-        //    actualResult = test1 - test2;
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
 
-        //    //Assert
-        //    Assert.AreEqual(expectedResult, actualResult);
-        //}
+        [TestMethod]
+        public void AdditionOperator_CheckIfListsCombineCorrectlyAtIndex3()
+        {
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> test3 = new CustomList<int>();
+            test1.Add(1);
+            test1.Add(2);
+            test1.Add(3);
+            test2.Add(4);
+            test2.Add(5);
+            test2.Add(6);
+            int expectedResult = 4;
+
+            //Act
+            test3 = test1 + test2;
+            int actualResult = test3[3];
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void AdditionOperator_CheckIfListsCombineCorrectlyAtIndex5()
+        {
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> test3 = new CustomList<int>();
+            test1.Add(1);
+            test1.Add(2);
+            test1.Add(3);
+            test2.Add(4);
+            test2.Add(5);
+            test2.Add(6);
+            int expectedResult = 6;
+
+            //Act
+            test3 = test1 + test2;
+            int actualResult = test3[5];
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void SubtractOperator_CheckIfListsSubractCorrectlyAtIndex0()
+        {
+            //subracting same number from each list
+
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> test3;
+            test1.Add(1);
+            test1.Add(2);
+            test1.Add(3);
+            test1.Add(4);
+            test2.Add(2);
+            test2.Add(4);
+            test2.Add(6);
+            test2.Add(8);
+            int expectedResult = 1;
+
+            //Act
+            test3 = test1 - test2;
+            int actualResult = test3[0];
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void SubtractOperator_CheckIfListsSubractCorrectlyAtIndex1()
+        {
+            //subracting same number from each list
+
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> test3;
+            test1.Add(1);
+            test1.Add(2);
+            test1.Add(3);
+            test1.Add(4);
+            test2.Add(2);
+            test2.Add(4);
+            test2.Add(6);
+            test2.Add(8);
+            int expectedResult = 3;
+
+            //Act
+            test3 = test1 - test2;
+            int actualResult = test3[1];
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void SubtractOperator_CheckIfListsSubractCorrectlyAtIndex2()
+        {
+            //subracting same number from each list
+
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> test3;
+            test1.Add(1);
+            test1.Add(2);
+            test1.Add(3);
+            test1.Add(4);
+            test2.Add(2);
+            test2.Add(4);
+            test2.Add(6);
+            test2.Add(8);
+            int expectedResult = 6;
+
+            //Act
+            test3 = test1 - test2;
+            int actualResult = test3[2];
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void SubtractOperator_CheckIfListsSubractCorrectlyAtIndex5()
+        {
+            //subracting same number from each list
+
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> test3;
+            test1.Add(1);
+            test1.Add(2);
+            test1.Add(3);
+            test1.Add(4);
+            test1.Add(5);
+            test1.Add(6);
+            test1.Add(7);
+            test1.Add(8);                            
+            test2.Add(2);
+            test2.Add(4);
+            test2.Add(6);
+            test2.Add(8);
+            test2.Add(10);
+            test2.Add(12);
+            int expectedResult = 12;
+
+            //Act
+            test3 = test1 - test2;
+            int actualResult = test3[5];
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
 
         //[TestMethod]
         //public void CheckConvertListToString()
