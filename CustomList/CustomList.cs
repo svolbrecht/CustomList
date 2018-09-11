@@ -121,33 +121,24 @@ namespace CustomList
         public static CustomList<T> operator -(CustomList<T> list1, CustomList<T> list2)
         {
             CustomList<T> result = new CustomList<T>();
-
             if (list1.count > list2.count)
             {
-                result = list1;
-                for (int i = 0; i < list2.count; i++)
+                for (int i = list2.count; i < list1.count; i++)
                 {
-                    list1.Remove(list1[i]);
+                    result.Add(list1[i]);
                 }
             }
             else if (list2.count > list1.count)
             {
-                result = list2;
-                for(int i = 0; i < list1.count; i++)
+                for (int i = list1.count; i < list2.count; i++)
                 {
-                    list2.Remove(list2[i]);
+                    result.Add(list2[i]);
                 }
             }
             else
             {
                 return result;
             }
-
-            //result = list1;
-            //foreach (T item in list2)
-            //{
-            //    result.Remove(item);
-            //}
 
             return result;
         }

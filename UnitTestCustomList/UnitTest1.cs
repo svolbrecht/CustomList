@@ -319,7 +319,7 @@ namespace UnitTestCustomList
             test2.Add(4);
             test2.Add(6);
             test2.Add(8);
-            int expectedResult = 1;
+            int expectedResult = 0;
 
             //Act
             test3 = test1 - test2;
@@ -344,7 +344,9 @@ namespace UnitTestCustomList
             test2.Add(4);
             test2.Add(6);
             test2.Add(8);
-            int expectedResult = 3;
+            test2.Add(10);
+            test2.Add(12);
+            int expectedResult = 12;
 
             //Act
             test3 = test1 - test2;
@@ -355,7 +357,7 @@ namespace UnitTestCustomList
         }
 
         [TestMethod]
-        public void SubtractOperator_CheckIfListsSubractCorrectlyAtIndex2()
+        public void SubtractOperator_CheckIfListsSubractCorrectlyAtIndex1Again()
         {
             //Arrange
             CustomList<int> test1 = new CustomList<int>();
@@ -365,15 +367,17 @@ namespace UnitTestCustomList
             test1.Add(2);
             test1.Add(3);
             test1.Add(4);
+            test1.Add(5);
+            test1.Add(7);
             test2.Add(2);
             test2.Add(4);
             test2.Add(6);
             test2.Add(8);
-            int expectedResult = 6;
+            int expectedResult = 7;
 
             //Act
             test3 = test1 - test2;
-            int actualResult = test3[2];
+            int actualResult = test3[1];
 
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -390,10 +394,10 @@ namespace UnitTestCustomList
             test1.Add(2);
             test1.Add(3);
             test1.Add(4);
-            test1.Add(5);
-            test1.Add(6);
-            test1.Add(7);
-            test1.Add(8);                            
+            test2.Add(5);
+            test2.Add(6);
+            test2.Add(7);
+            test2.Add(8);                            
             test2.Add(2);
             test2.Add(4);
             test2.Add(6);
