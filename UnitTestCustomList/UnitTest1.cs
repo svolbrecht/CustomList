@@ -219,8 +219,7 @@ namespace UnitTestCustomList
         {
             //Arrange
             CustomList<int> test1 = new CustomList<int>();
-            CustomList<int> test2 = new CustomList<int>();
-            CustomList<int> test3 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();  
             test1.Add(1);
             test1.Add(2);
             test1.Add(3);
@@ -230,11 +229,10 @@ namespace UnitTestCustomList
             int expectedResult = 1;
 
             //Act
-            test3 = test1 + test2;
-            int actualResult = test3[0];
+            CustomList<int> actualResult = test1 + test2;
 
             //Assert
-            Assert.AreEqual(expectedResult, actualResult);
+            Assert.AreEqual(expectedResult, actualResult[0]);
         }
 
         [TestMethod]
@@ -309,8 +307,6 @@ namespace UnitTestCustomList
         [TestMethod]
         public void SubtractOperator_CheckIfListsSubractCorrectlyAtIndex0()
         {
-            //subracting same number from each list
-
             //Arrange
             CustomList<int> test1 = new CustomList<int>();
             CustomList<int> test2 = new CustomList<int>();
@@ -336,8 +332,6 @@ namespace UnitTestCustomList
         [TestMethod]
         public void SubtractOperator_CheckIfListsSubractCorrectlyAtIndex1()
         {
-            //subracting same number from each list
-
             //Arrange
             CustomList<int> test1 = new CustomList<int>();
             CustomList<int> test2 = new CustomList<int>();
@@ -363,8 +357,6 @@ namespace UnitTestCustomList
         [TestMethod]
         public void SubtractOperator_CheckIfListsSubractCorrectlyAtIndex2()
         {
-            //subracting same number from each list
-
             //Arrange
             CustomList<int> test1 = new CustomList<int>();
             CustomList<int> test2 = new CustomList<int>();
@@ -390,8 +382,6 @@ namespace UnitTestCustomList
         [TestMethod]
         public void SubtractOperator_CheckIfListsSubractCorrectlyAtIndex5()
         {
-            //subracting same number from each list
-
             //Arrange
             CustomList<int> test1 = new CustomList<int>();
             CustomList<int> test2 = new CustomList<int>();
