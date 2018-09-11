@@ -431,52 +431,52 @@ namespace UnitTestCustomList
             Assert.AreEqual(expectedValue, actualValue);
         }
 
-        //[TestMethod]
-        //public void CheckZipTwoLists()
-        //{
-        //    //Arrange
-        //    CustomList<int> test1 = new CustomList<int>();
-        //    CustomList<int> test2 = new CustomList<int>();
-        //    CustomList<int> test3 = new CustomList<int>();
-        //    test1.Add(1);
-        //    test1.Add(3);
-        //    test1.Add(5);
-        //    test2.Add(2);
-        //    test2.Add(4);
-        //    test2.Add(6);
-        //    int expectedValue = 5;
+        [TestMethod]
+        public void Zip_CheckAtIndex4()
+        {
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> test3 = new CustomList<int>();
+            test1.Add(1);
+            test1.Add(3);
+            test1.Add(5);
+            test2.Add(2);
+            test2.Add(4);
+            test2.Add(6);
+            int expectedValue = 5;
 
-        //    //Act
-        //    test3 = test1.Zip(test2);
-        //    int actualValue = test3[4];
+            //Act
+            test3 = test1.Zip(test2);
+            int actualValue = test3[4];
 
-        //    //Assert
-        //    Assert.AreEqual(expectedValue, actualValue);
-        //}
+            //Assert
+            Assert.AreEqual(expectedValue, actualValue);
+        }
 
-        //[TestMethod]
-        //public void CheckZipListOfDifferentSizes()
-        //{
-        //    //Arrange
-        //    CustomList<int> test1 = new CustomList<int>();
-        //    CustomList<int> test2 = new CustomList<int>();
-        //    CustomList<int> test3 = new CustomList<int>();
-        //    test1.Add(1);
-        //    test1.Add(3);
-        //    test1.Add(5);
-        //    test2.Add(2);
-        //    test2.Add(4);
-        //    test2.Add(6);
-        //    test2.Add(7);
-        //    test2.Add(8);
-        //    int expectedValue = 8;
+        [TestMethod]
+        public void Zip_ListsOfDifferentSizesAtIndex7()
+        {
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> test3 = new CustomList<int>();
+            test1.Add(1);
+            test1.Add(3);
+            test1.Add(5);
+            test2.Add(2);
+            test2.Add(4);
+            test2.Add(6);
+            test2.Add(7);
+            test2.Add(8);
+            int expectedValue = 8;
 
-        //    //Act
-        //    test3 = test1.Zip(test2);
-        //    int actualValue = test3[7];
+            //Act
+            test3 = test1.Zip(test2);
+            int actualValue = test3[7];
 
-        //    //Assert
-        //    Assert.AreEqual(expectedValue, actualValue);
-        //}
+            //Assert
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }
