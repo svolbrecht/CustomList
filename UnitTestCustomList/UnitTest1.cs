@@ -414,22 +414,22 @@ namespace UnitTestCustomList
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-        //[TestMethod]
-        //public void CheckConvertListToString()
-        //{
-        //    //Arrange
-        //    CustomList<int> test1 = new CustomList<int>();
-        //    test1.Add(1);
-        //    test1.Add(2);
-        //    test1.Add(3);
-        //    string expectedValue = "1,2,3";
+        [TestMethod]
+        public void CheckConvertListToString()
+        {
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            test1.Add(1);
+            test1.Add(2);
+            test1.Add(3);
+            string expectedValue = "123";
 
-        //    //Act
-        //    string actualValue = test1.ToString();
+            //Act
+            string actualValue = test1.ToString();
 
-        //    //Assert
-        //    Assert.AreEqual(expectedValue, actualValue);
-        //}
+            //Assert
+            Assert.AreEqual(expectedValue, actualValue);
+        }
 
         //[TestMethod]
         //public void CheckZipTwoLists()

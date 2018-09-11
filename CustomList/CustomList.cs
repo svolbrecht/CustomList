@@ -142,5 +142,16 @@ namespace CustomList
 
             return result;
         }
+
+        override public string ToString()
+        {
+            string result = "";
+
+            for (int i = 0; i < count; i++)
+            {
+                result += Convert.ToString(array[i]);
+            }
+            return result;
+        }
     }
 }
