@@ -35,11 +35,16 @@ Example:
             list1.Add(2);
             list1.Add(3);
             list1.Add(4);
-            list2.Add(2);
-            list2.Add(4);
+            list2.Add(5);
             list2.Add(6);
+            list2.Add(7);
             list2.Add(8);
+			list2.Add(9);
+            list2.Add(10);
 
       
             resultList = list1 - list2;
+
+
+		a Console.WriteLine() of resultList would print a list of {9, 10}
      
