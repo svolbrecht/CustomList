@@ -1,0 +1,45 @@
+Documentation for functionality of my – operator overload
+
+
+Syntax:
+
+resultList<T> = List<T>1 - List<T>2
+
+
+
+Parameters:
+
+List<T>
+
+Requires two lists to be subtracted, a third to capture returned value.
+
+
+
+Returns:
+
+List<T>
+
+The List<T> with the smaller number of indexes is identified. The value of each of the remaining indexes in the
+larger List<T> are then added to a new List<T>. If the List<T>'s to be subtracted are the same size, an empty
+List<T> is returned.
+
+
+	
+Example:
+
+			CustomList<int> list1 = new CustomList<int>();
+            CustomList<int> list2 = new CustomList<int>();
+            CustomList<int> resultList;
+
+            list1.Add(1);
+            list1.Add(2);
+            list1.Add(3);
+            list1.Add(4);
+            list2.Add(2);
+            list2.Add(4);
+            list2.Add(6);
+            list2.Add(8);
+
+      
+            resultList = list1 - list2;
+     

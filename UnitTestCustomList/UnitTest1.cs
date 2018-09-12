@@ -305,6 +305,36 @@ namespace UnitTestCustomList
         }
 
         [TestMethod]
+        public void AdditionOperator_CheckIfListsCombineCorrectlyAtIndex12()
+        {
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> test3 = new CustomList<int>();
+            test1.Add(1);
+            test1.Add(2);
+            test1.Add(3);
+            test2.Add(4);
+            test2.Add(5);
+            test2.Add(6);
+            test1.Add(7);
+            test1.Add(8);
+            test1.Add(9);
+            test2.Add(10);
+            test2.Add(11);
+            test2.Add(12);
+            test2.Add(13);
+            int expectedResult = 13;
+
+            //Act
+            test3 = test1 + test2;
+            int actualResult = test3[12];
+
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
         public void SubtractOperator_CheckIfListsSubractCorrectlyAtIndex0()
         {
             //Arrange
